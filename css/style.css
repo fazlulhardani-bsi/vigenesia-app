@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* NAVIGATION */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background: white;
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+/* MAIN CONTENT */
+.main-content {
+    flex: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.welcome-box {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.welcome-box h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.welcome-box p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.user-welcome, .guest-welcome {
+    margin-top: 30px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 2px solid #667eea;
+    color: #667eea;
+}
+
+/* FEATURES */
+.features {
+    margin-top: 40px;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #666;
+}
+
+/* FORM STYLES */
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-links {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.form-links a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.form-links a:hover {
+    text-decoration: underline;
+}
+
+/* ALERTS */
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.alert.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* PROFILE STYLES */
+.profile-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.profile-info {
+    display: grid;
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.info-item label {
+    font-weight: 600;
+    color: #555;
+}
+
+.info-item span {
+    color: #333;
+}
+
+.highlight {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.status-active {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.quick-actions {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.quick-actions h3 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.action-btn {
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.action-btn.logout {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+}
+
+/* MOTIVATION STYLES */
+.motivation-form {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.motivation-form h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.motivations-list {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.motivations-list h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.motivation-items {
+    display: grid;
+    gap: 20px;
+}
+
+.motivation-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s ease;
+}
+
+.motivation-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.motivation-content {
+    flex: 1;
+}
+
+.motivation-content p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.motivation-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.motivation-actions {
+    margin-left: 15px;
+}
+
+.delete-btn {
+    background: #ff6b6b;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #ee5a24;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-link {
+        width: 200px;
+        text-align: center;
+    }
+    
+    .main-content {
+        padding: 20px;
+    }
+    
+    .form-container {
+        margin: 20px;
+        padding: 25px;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .motivation-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .motivation-actions {
+        margin-left: 0;
+        margin-top: 15px;
+        align-self: flex-end;
+    }
+    
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+}
